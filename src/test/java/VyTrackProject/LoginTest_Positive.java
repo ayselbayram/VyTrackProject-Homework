@@ -29,7 +29,7 @@ public class LoginTest_Positive {
        String expectedURL="https://qa2.vytrack.com/";
        String actualURL = driver.getCurrentUrl();
        StringUtility.verifyEquals(expectedURL,actualURL);
-
+        System.out.println("test passed");
        driver.close();
 
 
