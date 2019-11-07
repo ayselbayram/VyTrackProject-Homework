@@ -9,7 +9,8 @@ public class StringUtility {
                 System.out.println("Test is passed");
             } else {
                 System.out.println("Test is failed");
-                System.out.println("Expected result is: " + expected + " but Actual result is: " + actual);
+                System.out.println("Expected result is: " + expected );
+                System.out.println("Actual result is: " + actual);
             }
         }
 
