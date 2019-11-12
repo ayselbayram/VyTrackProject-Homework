@@ -22,7 +22,7 @@ public class MyFirstSeleniumScript {
         }else{
             System.out.println("Test failed");
         }
-        //to close browser
+        //to close browser at the end of test execution
         //if we open gate we need to close it.
         driver.close();
     }

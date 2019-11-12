@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 /*
    .get("url")--> to open a website
    .close() method-->to close the browser
-   .quit()method-->
+   .quit()method--> close all te tabs
     ####difference between close and quit method?
     .close()-->closes only that current tab
     .quit()-->will shutdown entire browser,regardless on number of tabs.

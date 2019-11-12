@@ -18,8 +18,9 @@ public class LoginTest_Negative {
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123");
         //find the 'submit' key element
         driver.findElement(By.id("_submit")).click();
-        String ActualMessage=driver.findElement(By.xpath("//div[@class='alert alert-error']//div")).getText();
+        String ActualMessage=driver.findElement(By.xpath("//div[@class='alert alert-error']")).getText();
         //*[@id="login-form"]/fieldset/div[1]/div
+
 
         String expectedMessage="Invalid user name or password.";
         //to verify the result of the expected and actual message
