@@ -1,11 +1,19 @@
 package Tests.day7;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class AnnotationsTest {
+    //runs only ones before  class  and before all tests
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("Before class");
+    }
+    //runs only ones after  class  and after all tests
+    @AfterClass
+    public void afterClass(){
+        System.out.println("After class");
+    }
     @BeforeMethod
     public void setup(){
         //some  code will be running before every test, like: test1, test2, test3..
