@@ -33,7 +33,7 @@ public class TestNGPractice {
         driver.quit();
 
     }
-    //lets verify that 'Test automation practice' headin is displayed
+    //lets verify that 'Test automation practice' heading is displayed
     @Test(description = "verify that heading is dispolayed")
     public void verifyHeadingDisplayed(){
          WebDriver driver=BrowserFactory.getDriver("chrome");
