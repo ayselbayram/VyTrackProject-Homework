@@ -28,7 +28,7 @@ public class CheckBoxes {
     public void test1(){
         //find all checkboxes
         //any check box will have[type='checkbox']
-        List<WebElement> checkBoxes=driver.findElements(By.cssSelector("[type='checkbox'"));
+        List<WebElement> checkBoxes=driver.findElements(By.cssSelector("[type='checkbox']"));
 //        for (WebElement each:checkBoxes){
 //            each.click();
 //        }
