@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
+import utils.BrowserUtils;
 
 import java.util.List;
 
@@ -28,9 +29,13 @@ public class CheckBoxes {
         //find all checkboxes
         //any check box will have[type='checkbox']
         List<WebElement> checkBoxes=driver.findElements(By.cssSelector("[type='checkbox'"));
+//        for (WebElement each:checkBoxes){
+//            each.click();
+//        }
         int index=1;
         for(WebElement checkbox:checkBoxes){
             if(!checkbox.isSelected() && checkbox.isEnabled()){
+                BrowserUtils.wait(1);
                 checkbox.click();
                 System.out.println("checkbox "+index +" is clicked: ");
             }else{
