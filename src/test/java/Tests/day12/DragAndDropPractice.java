@@ -27,7 +27,7 @@ public class DragAndDropPractice {
 
         //@param source element to emulate button down at.
         //@param target element to move to and release the mouse at.
-        actions.dragAndDrop(earth,moon).perform();
+        actions.dragAndDrop(moon,earth).perform();
 
         BrowserUtils.wait(3);//just for demo
 
