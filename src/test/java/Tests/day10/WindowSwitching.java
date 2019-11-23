@@ -37,7 +37,7 @@ public class WindowSwitching {
         //after 3 seconds another website will be opened, in the second window
         //selenium doesnt switch automatically to the new window
         BrowserUtils.wait(5);
-        //in the selenium every window has an ID. that id calls window handle
+        //in the selenium every window has an ID. that id calls windowhandle
         //to read window handle we use method "getWindowHandle()"
         //after new window was open we can get list of all window id's, or window handles
 

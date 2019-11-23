@@ -22,7 +22,7 @@ public class WaitsPractice {
         driver= BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/");
     }
-    @Test
+    @Test(description = "implicitly wait")
     public void test1(){
         //this line should be before all findelement()
         //to wait with in 10 seconds until element is present
@@ -42,7 +42,7 @@ public class WaitsPractice {
       WebElement finishElement=driver.findElement(By.id("finish"));
         System.out.println(finishElement.getText());
     }
-    @Test
+    @Test(description = "explicit wait")
     public void test2(){
         driver.findElement(By.linkText("Dynamic Loading")).click();
         //select example 1
@@ -60,7 +60,7 @@ public class WaitsPractice {
         //we create object of webdriverwait to apply explicit wait
         //we must provide webdriver object and period of time
         //within this period of time selenium will check every 500 miliseconds
-        //if consition is true, if condition has met, ne neeed to wait longer
+        //if consition is true, if condition has met, no neeed to wait longer
         //your script will continue executing
         WebDriverWait wait=new WebDriverWait(driver,10);
         //how to apply condition| ExpectedConditions.condition

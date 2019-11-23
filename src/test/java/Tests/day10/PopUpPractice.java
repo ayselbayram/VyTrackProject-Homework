@@ -26,10 +26,12 @@ public class PopUpPractice {
         //to deal with popup, we can create object of Alert
         //switches to the currently active modal dialog
         Alert alert=driver.switchTo().alert();
+        BrowserUtils.wait(1);
+        //means clcik ok
         alert.accept();
 
     }
-    @Test(description = "click on button 2 and cancel in popup message")
+    @Test(description = "click on button 2 and cancel in popup message, then get the message")
     public void test2(){
         driver.findElement(By.linkText("JavaScript Alerts")).click();
         //[2] means second button out of available, since there are 3 buttons
