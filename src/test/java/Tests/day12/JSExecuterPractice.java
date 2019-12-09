@@ -45,7 +45,7 @@ public class JSExecuterPractice {
         //                    Array of webelement                webelement
         BrowserUtils.wait(2);
     }
-    //    var btn1 = document.getElementsByTagName('a')[1];
+//        var btn1 = document.getElementsByTagName('a')[1];
 //    btn1.click()
     @Test(description = "Click with JS executor")
     public void test3(){
