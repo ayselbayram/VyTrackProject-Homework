@@ -18,7 +18,7 @@ public class NewCalendarEventsTest extends TestBase {
         loginpage.navigateTo("Activities","Calendar Events");
         //subclass of basepage class, all the methods inherited , navigateto from basepage class inherited to login
 
-        String expectedSubtitle = "All Calendar Eventsj";
+        String expectedSubtitle = "All Calendar Events";
         String actualSubTitle=loginpage.getPageSubTitle();
 
         Assert.assertEquals(actualSubTitle,expectedSubtitle);//if this fail next statement is unreachable

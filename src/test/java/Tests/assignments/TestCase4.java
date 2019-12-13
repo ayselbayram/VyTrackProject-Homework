@@ -1,9 +1,6 @@
-package Tests.Assignments;
+package Tests.assignments;
 
-import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +14,6 @@ import utils.BrowserUtils;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.xpath;
 
 public class TestCase4 {
@@ -247,6 +243,7 @@ public class TestCase4 {
 
 
         WebElement summaryMessage = driver.findElement(By.xpath("//div[@class='control-group recurrence-summary alert-info']"));
+        System.out.println(summaryMessage.getText());
         Assert.assertEquals(summaryMessage.getText(), "Summary:\n" +
                 "Daily every 1 day, end after 10 occurrences");
 
@@ -287,6 +284,7 @@ public class TestCase4 {
         date.click();
 
         WebElement summaryMessage = driver.findElement(By.xpath("//div[@class='control-group recurrence-summary alert-info']"));
+        System.out.println(summaryMessage.getText());
         Assert.assertEquals(summaryMessage.getText(), "Summary:\n" +
                 "Daily every 1 day, end by Nov 18, 2021");
 

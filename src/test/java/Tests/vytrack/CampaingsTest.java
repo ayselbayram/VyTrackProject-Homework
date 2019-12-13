@@ -20,5 +20,14 @@ public class CampaingsTest extends TestBase {
 
 
     }
+    @Test(description = "")
+    public void clickViewPerPage(){
+        LoginPage loginpage=new LoginPage();
+        loginpage.login("storemanager85","UserUser123");
+        loginpage.navigateTo("Marketing","Campaigns");
+        CampaignsPage campaignsPage=new CampaignsPage();
+
+        campaignsPage.selectViewPerPage("10");
+    }
 
 }

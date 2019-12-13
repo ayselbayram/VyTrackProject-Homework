@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Campaign">
+    <test name="Scope test">
+        <parameter name="test" value="Campaign"></parameter>
+        <parameter name="env_url" value="https://qa3.vytrack.com/user/login"></parameter>
+        <classes>
+            <class name="Tests.vytrack.CampaingsTest"/>
+        </classes>
+    </test>
+</suite>

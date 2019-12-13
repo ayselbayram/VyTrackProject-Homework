@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.Driver;
 
@@ -11,7 +12,7 @@ import java.util.List;
 public class CampaignsPage extends BasePage{
     @FindBy(xpath = "//button/input[@type='checkbox']")
     public WebElement checkBox;
-    @FindBy(xpath = "//div//button[@class='btn dropdown-toggle ']")
+    @FindBy(xpath = "//div[@class='page-size pull-right form-horizontal']/div/div/button/span")
     public WebElement viewPerPage;
     @FindBy(xpath = "//a[@title='Reset']")
     public WebElement resetButton;
@@ -37,10 +38,12 @@ public class CampaignsPage extends BasePage{
     }
 
     public void selectViewPerPage(String value){
-        viewPerPage.click();
+//        viewPerPage.click();
         String locator="//a[@data-size='"+value+"']";
-        WebElement valueViewPage=Driver.get().findElement(By.xpath(locator));
-        valueViewPage.click();
+//        WebElement valueViewPage=Driver.get().findElement(By.xpath(locator));
+        Select select=new Select(viewPerPage);
+        select.selectByValue(value);
+//        valueViewPage.click();
 
     }
     public void gridSearchButton(String message){
